@@ -23,7 +23,7 @@ und drücke danach die TAB-Taste (auch mehrmals). Du wirst Angebote zu Vervollst
 
 
 ### Verzeichnisse und Dateien
-Wir wechseln das Laufwerk
+Zuhause befindest du dich hier bereits im `Dokumente`-Ordner. In der AG wechseln wir das Laufwerk:
 
 ```cmd
 u:
