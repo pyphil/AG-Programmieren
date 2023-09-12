@@ -57,7 +57,7 @@ Schreibe nun etwas in diese Datei, schließe sie und speichere sie.
 >1. Füge deiner Datei über die Kommandozeile einen Text hinzu.
 >1. Lösche eine deiner Dateien.
 >1. Lege ein Unterverzeichnus mit Dateien an und lösche das ganze Verzeichnis mit den Dateien.
->1. Probiere weiter Kommandos aus.
+>1. Probiere weitere Kommandos aus.
 
 
 ### *Mit ein paar Ausnahmen funktionieren diese Kommandos sowohl in der Bash als auch auf der PowerShell:*
