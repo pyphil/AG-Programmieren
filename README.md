@@ -68,7 +68,7 @@ Schreibe nun etwas in diese Datei, schließe sie und speichere sie.
 |pwd|Zeigt das aktuelle Verzeichnis an
 |start  (Win)|Öffnet eine Datei im Standardprogramm|
 |cat|Gibt den Text einer Datei auf der Kommandozeile aus.
-|echo|Gibt Text auf der Konsole aus oder schreibt ihn in eine Datei (`echo "Hallo Welt!" > test.txt)
+|echo|Gibt Text auf der Konsole aus oder schreibt ihn in eine Datei (`echo "Hallo Welt!" > test.txt`)
 |hostname|Den Namen des Rechners anzeigen
 |ipconfig  (Win)|Netzwerkkonfiguration des Recheners anzeigen
 
