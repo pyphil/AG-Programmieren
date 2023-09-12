@@ -123,3 +123,61 @@ Einfache Rechnungen mit Python:
 > https://tutorial.djangogirls.org/de/python_introduction/
 >
 > Probiere es aus.
+
+### Python im Editor
+
+Natürlich müssen wir unseren Code normalerweise in Dateien speichern. In Python sind dies `.py`-Dateien. In VSCode sollten wir immer einen Ordner mit den dazugehörigen Projektdateien öffnen. Daher legen wir erst ein neues Verzeichnis in unserem `AG-Programmieren`-Verzeichnis an, mit dem Namen `Einstieg` Danach öffnen wir es in VSCode (-> `Open Folder`).
+
+Erstelle nun in VSCode eine neue Datei mit dem Namen "hello_world.py" mit folgendem Inhalt:
+
+```python
+print("Hello World!")
+```
+
+Führe die Datei aus, indem du auf den grünen Pfeil oben rechts klickst. Im Terminal im unteren Bereich siehst du den Output.
+
+## Variablen
+Das klappt? Super! Dann sind wir bereit. In der Einführung in die Python Shell bei Django Girls hast du schon Variablen kennen gelernt. Einer Variable weisen wir bestimmte Werte zu. In Python muss die Variable nicht vorher deklariert werden und der Typ nicht vorher festgelegt werden. Der Typ ergibt sich aus dem Inhalt, der zugewiesen wird. Dennoch ist es wichtig, ein paar  Typen zu kennen:
+
+|Variablen-Typ|Beschreibung|Mögliche Werte|
+|---|---|---|
+|str|String = Zeichenkette in Anführungsstrichen|"Hallo Welt"|
+|int|Integer = Ganze Zahl ohne Anführungsstriche|123|
+|float|Gleitkommazahl (mit Punkt)|12.399|
+|bool|Boolean = Wahrheitswert wahr oder falsch|True / False|
+
+Lass uns das "Hello World!"-Programm umschreiben. Zunächst fragen wir den User (mit `input`), wie er/sie heißt, speichern dies in einer Variable und geben einen entsprechenden Gruß aus:
+
+```python
+name = input("Wie ist dein Name? ") 
+print("Hallo" + name)
+```
+*Übrigens: Variablen werden immer klein geschrieben und mit einem Unterstrich (_), wenn sie aus mehreren Wörtern bestehen.*
+
+## Der "Kurzgeschichten-Generator"
+Schreibe ein Programm, das eine Kurzgeschichte ausgibt. Das Programm sollte dem Benutzer zunächst
+ein paar Fragen stellen und dann die Geschichte entsprechend anpassen. Die Ausgabe des Programms —
+inklusive der Benutzereingaben - könnte wie folgt aussehen:
+
+```
+Dieses Programm schreibt eine Kurzgeschichte in der DU vorkommst.
+Wie ist dein Name? Stefan
+In welchem Monat ist dein Geburtstag? April
+Deine Haarfarbe? blond
+Dein Wohnort? Dortmund
+
+
+Die Verabredung mit dem Komissar
+Es war ein grauer Morgen im April. Die Sonne war gerade erst aufgegangen und
+es war noch wenig Betrieb im Zentrum von Dortmund.
+Hauptkommissar Hartmann stand vor de Bistro und schaute auf die Uhr.
+Wo bleibt Stefan nur?, dachte er. Ist etwas schief gelaufen?
+Vielleicht hatte Stefans Freundin Wind von der Sache bekommen und seine
+Pläne durchkreuzt.
+Eine Person mit struwweligen blonden Haaren näherte sich mit raschen Schritten.
+Der Kommissar atmete auf. es war Stefan. Jetzt konnte eigentlich nichts
+mehr passieren...
+```
+>### Aufgabe
+>Schreibe das passende Programm dazu im Editor IDLE. Speichere die Benutzereingaben in die Variablen name, monat, haarfarbe und ort und verwende sie dann im Text. Wie musst du Besonderheiten wie "Stefan`s`" und "blond`en`" lösen?
+
