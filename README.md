@@ -154,6 +154,28 @@ print("Hallo" + name)
 ```
 *Übrigens: Variablen werden immer klein geschrieben und mit einem Unterstrich (_), wenn sie aus mehreren Wörtern bestehen.*
 
+Warum Typen wichtig sind, sieht man an folgendem Beispiel. Wir fragen das Alter ab und berechnen, wie alt die Person in 50 Jahren ist:
+
+```python
+alter = input("Wie alt bist du? ")
+print("In 50 Jahren bist du " + alter + 50 " Jahre alt.")
+```
+
+Die Fehlermeldung wird so aussehen.
+
+```
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+```
+
+>### Aufgabe
+>Was ist passiert? Wie kann man es lösen?
+>
+>TIPP 1: concatenate bedeutet aneinanderhängen\
+>TIPP 2: Typen können auch umgewandelt werden mit `int(variablenname)``
+
+
 ## Der "Kurzgeschichten-Generator"
 Schreibe ein Programm, das eine Kurzgeschichte ausgibt. Das Programm sollte dem Benutzer zunächst
 ein paar Fragen stellen und dann die Geschichte entsprechend anpassen. Die Ausgabe des Programms —
