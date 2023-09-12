@@ -47,8 +47,6 @@ notepad test.txt
 
 Schreibe nun etwas in diese Datei, schließe sie und speichere sie.
 
----
-
 >### Aufgaben
 >Unten findest du weitere Kommandos. 
 >1. Erstelle dann noch eine weitere Datei.
