@@ -1,7 +1,7 @@
 
 # PYTHON KURS
 ## Einstieg in die Kommandozeile
-Wer programmieren lernen möchte, darf keine Angst vor der Kommandozeile haben. Unter Windows ist dies CMD und die neuere und viel mächtigere PowerShell. Unter MacOS und Linux z.B. die Bash-Konsole.
+Wer programmieren lernen möchte, darf keine Angst vor der Kommandozeile (Terminal) haben. Unter Windows ist dies CMD und die neuere und viel mächtigere PowerShell. Unter MacOS und Linux z.B. die Bash-Konsole.
 Wir nehmen die **PowerShell** unter Windows und probieren einige wesentliche Kommandos aus. 
 
 ### Programme starten
@@ -51,15 +51,16 @@ Schreibe nun etwas in diese Datei, schließe sie und speichere sie.
 
 >### Aufgaben
 >Unten findest du weitere Kommandos. 
->* Erstelle dann noch eine weitere Datei.
->* Lasse dir den Inhalt der Dateien auf der Kommandozeile ausgeben.
->* Benutze `start`, um die Datei im Standardprogramm für Textdateien zu öffnen (Notepad)
->* Füge deiner Datei über die Kommandozeile einen Text hinzu.
->* Lösche eine deiner Dateien.
->* Lege ein Unterverzeichnus mit Dateien an und lösche das ganze Verzeichnis mit den Dateien.
->* Probiere weiter Kommandos aus.
+>1. Erstelle dann noch eine weitere Datei.
+>1. Lasse dir den Inhalt der Dateien auf der Kommandozeile ausgeben.
+>1. Benutze `start`, um die Datei im Standardprogramm für Textdateien zu öffnen (Notepad)
+>1. Füge deiner Datei über die Kommandozeile einen Text hinzu.
+>1. Lösche eine deiner Dateien.
+>1. Lege ein Unterverzeichnus mit Dateien an und lösche das ganze Verzeichnis mit den Dateien.
+>1. Probiere weiter Kommandos aus.
 
-*Mit ein paar Ausnahme funktionieren diese Kommandos sowohl in der Bash als auch auf der PowerShell:*
+
+### *Mit ein paar Ausnahmen funktionieren diese Kommandos sowohl in der Bash als auch auf der PowerShell:*
 |Kommandos|Funktion|
 |---|---|
 |mkdir|neues Verzeichnis (Ordner) erstellen|
@@ -72,3 +73,53 @@ Schreibe nun etwas in diese Datei, schließe sie und speichere sie.
 |echo|Gibt Text auf der Konsole aus oder schreibt ihn in eine Datei (`echo "Hallo Welt!" > test.txt)
 |hostname|Den Namen des Rechners anzeigen
 |ipconfig  (Win)|Netzwerkkonfiguration des Recheners anzeigen
+
+
+# Installation von Python und VSCode für zu Hause
+Auf deinem Rechner zu Hause kannst du Python und VSCode (Visual Studio Code, der momentan bei weitem angesagteste aber auch für Anfänger geeignete Editor) installieren:
+* https://www.python.org/
+* https://code.visualstudio.com/
+
+Wichtig ist bei der Python-Installation, dass du Python der PATH Variable hinzufügst, sodass python.exe auf der Kommandozeile verfügbar ist:
+
+![Add Python to Path](images/pythontopath.png)
+
+Beim Rest der Python-Installation kannst du die Standardeinstellungen übernehmen.
+
+# Die Python Shell
+Python-Code muss im Gegensatz zu Sprachen wie C/C++ nicht kompiliert werden. Er wird vom Interpreter bei der Ausführung in maschinenlesbaren Code umgewandelt. Wir können daher auch direkt auf der Python Shell unseren Code eingeben.
+
+Öffne Visual Studio Code (VSCode) und wähle im Menu `Terminal` -> `New Terminal`.
+
+Gib nun im Terminal ein:
+
+```cmd
+python.exe
+```
+
+Du landest auf der Python-Shell:
+
+```cmd
+>>>
+```
+
+Nun kann es losgehen. In jeder Programmiersprache ist das erste Programm das "Hello World!"-Programm. Das geht sehr einfach:
+
+```python
+>>>print("Hello World!")
+Hello World
+```
+
+Einfache Rechnungen mit Python:
+```python
+>>>print(2 + 3)
+5
+```
+
+---
+>### Aufgabe
+> In folgendem Online-Kurs lernst du mehr über die Python-Shell kennen:
+>
+> https://tutorial.djangogirls.org/de/python_introduction/
+>
+> Probiere es aus.
