@@ -192,7 +192,7 @@ Dein Wohnort? Dortmund
 Die Verabredung mit dem Komissar
 Es war ein grauer Morgen im April. Die Sonne war gerade erst aufgegangen und
 es war noch wenig Betrieb im Zentrum von Dortmund.
-Hauptkommissar Hartmann stand vor de Bistro und schaute auf die Uhr.
+Hauptkommissar Hartmann stand vor dem Bistro und schaute auf die Uhr.
 Wo bleibt Stefan nur?, dachte er. Ist etwas schief gelaufen?
 Vielleicht hatte Stefans Freundin Wind von der Sache bekommen und seine
 Pläne durchkreuzt.
@@ -202,4 +202,15 @@ mehr passieren...
 ```
 >### Aufgabe
 >Schreibe das passende Programm dazu im Editor IDLE. Speichere die Benutzereingaben in die Variablen name, monat, haarfarbe und ort und verwende sie dann im Text. Wie musst du Besonderheiten wie "Stefan`s`" und "blond`en`" lösen?
+
+## Kontrollstrukturen
+Kontrollstrukturen legen die Reihenfolge fest, mit der Anweisungen ausgeführt werden. Die einfachste Form hast du oben bereits kennen gelernt: Die Sequenz, bei der einfach alle Befehle nacheinander abgearbeitet werden. Die wichtigsten Kontrollstrukturen sind:
+
+|Kontrollstruktur|Code|Bedeutung|
+|---|---|---|
+|Verzweigungen|`if`|Wenn eine Bedingung erfüllt ist mache ...|
+||`if` ... `else`|Wenn eine Bedingung erfüllt ist mache ..., sonst: mache ...|
+|Schleifen|`while`|Solange eine Bedingung erfüllt ist mache fortlaufend ...,|
+||`for`|Für jedes Element in einer Liste mache ...|
+|Funktionen|`def myfunction():` <br> `    ...`|Code in einer Funktion ausführen| 
 
