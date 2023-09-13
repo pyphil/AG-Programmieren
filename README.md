@@ -201,7 +201,7 @@ Der Kommissar atmete auf. es war Stefan. Jetzt konnte eigentlich nichts
 mehr passieren...
 ```
 >### Aufgabe
->Schreibe das passende Programm dazu im Editor IDLE. Speichere die Benutzereingaben in die Variablen name, monat, haarfarbe und ort und verwende sie dann im Text. Wie musst du Besonderheiten wie "Stefan`s`" und "blond`en`" lösen?
+>Schreibe das passende Programm dazu im Editor VSCode. Lege dazu eine neue Datei `kurzgeschichtengenerator.py` an. Speichere die Benutzereingaben in die Variablen `name`, `monat`, `haarfarbe` und `ort` und verwende sie dann im Text. Wie musst du Besonderheiten wie "Stefan`s`" und "blond`en`" lösen?
 
 ## Kontrollstrukturen
 Kontrollstrukturen legen die Reihenfolge fest, mit der Anweisungen ausgeführt werden. Die einfachste Form hast du oben bereits kennen gelernt: Die Sequenz, bei der einfach alle Befehle nacheinander abgearbeitet werden. Die wichtigsten Kontrollstrukturen sind:
