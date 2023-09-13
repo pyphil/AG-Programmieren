@@ -124,7 +124,7 @@ Einfache Rechnungen mit Python:
 >
 > Gehe den Kurs durch und probiere einiges aus. Du lernst etwas über Variablen, Listen und Dictionaries. Nach "Boolean" stopst du und es geht hier weiter.
 
-### Python im Editor
+# Python im Editor
 
 Natürlich müssen wir unseren Code normalerweise in Dateien speichern. In Python sind dies `.py`-Dateien. In VSCode sollten wir immer einen Ordner mit den dazugehörigen Projektdateien öffnen. Daher legen wir erst ein neues Verzeichnis in unserem `AG-Programmieren`-Verzeichnis an, mit dem Namen `Einstieg` Danach öffnen wir es in VSCode (-> `Open Folder`).
 
@@ -177,7 +177,7 @@ TypeError: can only concatenate str (not "int") to str
 
 
 ## Der "Kurzgeschichten-Generator"
-Schreibe ein Programm, das eine Kurzgeschichte ausgibt. Das Programm sollte dem Benutzer zunächst
+Wir wollen ein Programm erstellen, das eine Kurzgeschichte ausgibt. Das Programm sollte dem Benutzer zunächst
 ein paar Fragen stellen und dann die Geschichte entsprechend anpassen. Die Ausgabe des Programms —
 inklusive der Benutzereingaben - könnte wie folgt aussehen:
 
