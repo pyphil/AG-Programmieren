@@ -23,7 +23,7 @@ und drücke danach die TAB-Taste (auch mehrmals). Du wirst Angebote zu Vervollst
 
 
 ### Verzeichnisse und Dateien
-Zuhause befindest du dich hier bereits im `Dokumente`-Ordner. In der AG wechseln wir das Laufwerk:
+Zuhause befindest du dich auf der PowerShell bereits im `Dokumente`-Ordner. In der AG wechseln wir das Laufwerk:
 
 ```cmd
 u:
@@ -61,16 +61,16 @@ Schreibe nun etwas in diese Datei, schließe sie und speichere sie.
 ### *Mit ein paar Ausnahmen funktionieren diese Kommandos sowohl in der Bash als auch auf der PowerShell:*
 |Kommandos|Funktion|
 |---|---|
-|mkdir|neues Verzeichnis (Ordner) erstellen|
-|ls  /  dir  (Win CMD)|Verzeichnisinhalt anzeigen|
-|rm|Entfernt eine Datei (nur in der PowerShell, sonst `del`)
-|rm – r|entfernt *rekursiv*, d.h. alle Dateien und Unterverzeichnisse eines Verzeichnisses
-|pwd|Zeigt das aktuelle Verzeichnis an
-|start  (Win)|Öffnet eine Datei im Standardprogramm|
-|cat|Gibt den Text einer Datei auf der Kommandozeile aus.
-|echo|Gibt Text auf der Konsole aus oder schreibt ihn in eine Datei (`echo "Hallo Welt!" > test.txt`)
-|hostname|Den Namen des Rechners anzeigen
-|ipconfig  (Win)|Netzwerkkonfiguration des Recheners anzeigen
+|mkdir                  |neues Verzeichnis (Ordner) erstellen|
+|ls  /  dir  (Win CMD)  |Verzeichnisinhalt anzeigen|
+|rm                     |Entfernt eine Datei (nur in der PowerShell, sonst `del`)
+|rm – r                 |entfernt *rekursiv*, d.h. alle Dateien und Unterverzeichnisse eines Verzeichnisses
+|pwd                    |Zeigt das aktuelle Verzeichnis an
+|start  (Win)           |Öffnet eine Datei im Standardprogramm|
+|cat                    |Gibt den Text einer Datei auf der Kommandozeile aus.
+|echo                   |Gibt Text auf der Konsole aus oder schreibt ihn in eine Datei (`echo "Hallo Welt!" > test.txt`)
+|hostname               |Den Namen des Rechners anzeigen
+|ipconfig  (Win)        |Netzwerkkonfiguration des Recheners anzeigen
 
 
 # Installation von Python und VSCode für zu Hause
@@ -82,7 +82,7 @@ Wichtig ist bei der Python-Installation, dass du Python der PATH Variable hinzuf
 
 ![Add Python to Path](images/pythontopath.png)
 
-Beim Rest der Python-Installation kannst du die Standardeinstellungen übernehmen.
+Beim Rest der Python-Installation sowie der VSCode-Installation kannst du die Standardeinstellungen übernehmen.
 
 # Die Python Shell
 Python-Code muss im Gegensatz zu Sprachen wie C/C++ nicht kompiliert werden. Er wird vom Interpreter bei der Ausführung in maschinenlesbaren Code umgewandelt. Wir können daher auch direkt auf der Python Shell unseren Code eingeben.
@@ -114,13 +114,15 @@ Einfache Rechnungen mit Python:
 5
 ```
 
+*Auf der Shell könnte man die `print`-Anweisung auch weglassen. Später brauchen wir sie aber, wenn wir Code in Dateien speichern.*
+
 ---
 >### Aufgabe
 > In folgendem Online-Kurs lernst du mehr über die Python-Shell kennen:
 >
 > https://tutorial.djangogirls.org/de/python_introduction/
 >
-> Probiere es aus.
+> Gehe den Kurs durch und probiere einiges aus. Du lernst etwas über Variablen, Listen und Dictionaries. Nach "Boolean" stopst du und es geht hier weiter.
 
 ### Python im Editor
 
