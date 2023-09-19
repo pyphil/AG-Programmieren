@@ -172,7 +172,7 @@ TypeError: can only concatenate str (not "int") to str
 >### Aufgabe
 >Was ist passiert? Wie kann man es lösen?
 >
->TIPP 1: concatenate bedeutet aneinanderhängen\
+>TIPP 1: 'concatenate' bedeutet verketten\
 >TIPP 2: Typen können auch umgewandelt werden mit `int(variablenname)``
 
 
@@ -203,7 +203,7 @@ mehr passieren...
 >### Aufgabe
 >Schreibe das passende Programm dazu im Editor VSCode. Lege dazu eine neue Datei `kurzgeschichtengenerator.py` an. Speichere die Benutzereingaben in die Variablen `name`, `monat`, `haarfarbe` und `ort` und verwende sie dann im Text. Wie musst du Besonderheiten wie "Stefan`s`" und "blond`en`" lösen?
 
-## Kontrollstrukturen
+## Kontrollstrukturen, Listen und Dictionaries
 Kontrollstrukturen legen die Reihenfolge fest, mit der Anweisungen ausgeführt werden. Die einfachste Form hast du oben bereits kennen gelernt: Die Sequenz, bei der einfach alle Befehle nacheinander abgearbeitet werden. Die wichtigsten Kontrollstrukturen sind:
 
 |Kontrollstruktur|Code|Bedeutung|
@@ -214,3 +214,15 @@ Kontrollstrukturen legen die Reihenfolge fest, mit der Anweisungen ausgeführt w
 ||`for`|Für jedes Element in einer Liste mache ...|
 |Funktionen|`def myfunction():` <br> `    ...`|Code in einer Funktion ausführen| 
 
+Bei Django Girls hast du noch zwei weitere wichtige Datentypen kennen gelernt, mit denen man mehrere Objekte strukturiert zusammenfassen kann: Listen und Dictionaries (Wörterbücher).
+
+|Datentyp|Codebeispiel|Bezug auf Elemente|Erklärung|
+|---|---|---|---|
+|Listen|<pre>colors = ["blue", "red",]</pre> oder: <pre>colors = [<br>    "blue",<br>    "red",<br>    "orange",<br>]</pre>|`print(colors[0])` gibt den String "blau" aus.|Einfache Listenelemente in eckigen Klammern. Die Zählung beginnt mit 0.|
+|Dictionaries|`favcolors = {`<br>`    "John": "blue",`<br>    "Kate": "green",<br>    "Peter": "red"<br>}
+### Pizzabestellung
+Im folgenden kleinen Programm wollen wir eine Pizzabestellung abwickeln. Es soll noch ein Getränk ausgewählt werden können und zuletzt der korrekte Betrag angezeigt werden. Beachte die Einrückung im mehrzeiligen Beispiel.
+
+Für dieses Programm werden wir mit Variablen arbeiten. Des Weiteren kommen Listen und Dictionaries zum Einsatz. Außerdem brauchen wir for-Schleifen, um die Listen abzuarbeiten.
+
+Fangen wir einfach an: Wir brauchen ein Menü. 
