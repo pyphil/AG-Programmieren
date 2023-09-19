@@ -197,7 +197,7 @@ Wo bleibt Stefan nur?, dachte er. Ist etwas schief gelaufen?
 Vielleicht hatte Stefans Freundin Wind von der Sache bekommen und seine
 Pläne durchkreuzt.
 Eine Person mit struwweligen blonden Haaren näherte sich mit raschen Schritten.
-Der Kommissar atmete auf. es war Stefan. Jetzt konnte eigentlich nichts
+Der Kommissar atmete auf. Es war Stefan. Jetzt konnte eigentlich nichts
 mehr passieren...
 ```
 >### Aufgabe
