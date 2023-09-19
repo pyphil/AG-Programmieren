@@ -219,7 +219,7 @@ Bei Django Girls hast du noch zwei weitere wichtige Datentypen kennen gelernt, m
 |Datentyp|Codebeispiel|Bezug auf Elemente|Erklärung|
 |---|---|---|---|
 |Listen|<pre>colors = ["blue", "red",]</pre> oder: <pre>colors = [<br>    "blue",<br>    "red",<br>    "orange",<br>]</pre>|`print(colors[0])` gibt den String "blau" aus.|Einfache Listenelemente in eckigen Klammern. Die Zählung beginnt mit 0.|
-|Dictionaries|`favcolors = {`<br>`    "John": "blue",`<br>    "Kate": "green",<br>    "Peter": "red"<br>}
+|Dictionaries|<pre>favcolors = {<br>    "John": "blue",`<br>    "Kate": "green",<br>    "Peter": "red"<br>}</pre>|`print(favcolor["Kate"])` gibt Kates Lieblingsfarbe aus.|Die Elemente eines Dictionaries bestehen immer aus Schlüssel ("Kate") und Wert ("green") (-> key and value)|
 ### Pizzabestellung
 Im folgenden kleinen Programm wollen wir eine Pizzabestellung abwickeln. Es soll noch ein Getränk ausgewählt werden können und zuletzt der korrekte Betrag angezeigt werden. Beachte die Einrückung im mehrzeiligen Beispiel.
 
