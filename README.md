@@ -134,7 +134,7 @@ Erstelle nun in VSCode eine neue Datei mit dem Namen "hello_world.py" mit folgen
 print("Hello World!")
 ```
 
-Führe die Datei aus, indem du auf den grünen Pfeil oben rechts klickst. Im Terminal im unteren Bereich siehst du den Output.
+Führe die Datei aus, indem du auf den *grünen Pfeil* oben rechts klickst. Im Terminal im unteren Bereich siehst du den Output.
 
 ## Variablen
 Das klappt? Super! Dann sind wir bereit. In der Einführung in die Python Shell bei Django Girls hast du schon Variablen kennen gelernt. Einer Variable weisen wir bestimmte Werte zu. In Python muss die Variable nicht vorher deklariert werden und der Typ nicht vorher festgelegt werden. Der Typ ergibt sich aus dem Inhalt, der zugewiesen wird. Dennoch ist es wichtig, ein paar  Typen zu kennen:
@@ -218,11 +218,80 @@ Bei Django Girls hast du noch zwei weitere wichtige Datentypen kennen gelernt, m
 
 |Datentyp|Codebeispiel|Bezug auf Elemente|Erklärung|
 |---|---|---|---|
-|Listen|<pre>colors = ["blue", "red",]</pre> oder: <pre>colors = [<br>    "blue",<br>    "red",<br>    "orange",<br>]</pre>|`print(colors[0])` gibt den String "blau" aus.|Einfache Listenelemente in eckigen Klammern. Die Zählung beginnt mit 0.|
+|Listen|<pre>colors = ["blue", "red",]</pre> oder: <pre>colors = [<br>    "blue",<br>    "red",<br>    "orange",<br>]</pre>|`print(colors[0])` gibt den String "blau" aus.|Einfache Listenelemente in eckigen Klammern. Die Zählung beginnt mit 0. Beachte die Einrückung im mehrzeiligen Beispiel.|
 |Dictionaries|<pre>favcolors = {<br>    "John": "blue",`<br>    "Kate": "green",<br>    "Peter": "red"<br>}</pre>|`print(favcolor["Kate"])` gibt Kates Lieblingsfarbe aus.|Die Elemente eines Dictionaries bestehen immer aus Schlüssel ("Kate") und Wert ("green") (-> key and value)|
+
 ### Pizzabestellung
-Im folgenden kleinen Programm wollen wir eine Pizzabestellung abwickeln. Es soll noch ein Getränk ausgewählt werden können und zuletzt der korrekte Betrag angezeigt werden. Beachte die Einrückung im mehrzeiligen Beispiel.
+Im folgenden kleinen Programm wollen wir eine Pizzabestellung abwickeln. Es soll noch ein Getränk ausgewählt werden können und zuletzt der korrekte Betrag angezeigt werden.
 
 Für dieses Programm werden wir mit Variablen arbeiten. Des Weiteren kommen Listen und Dictionaries zum Einsatz. Außerdem brauchen wir for-Schleifen, um die Listen abzuarbeiten.
 
-Fangen wir einfach an: Wir brauchen ein Menü. 
+Fangen wir einfach an: Erstelle eine neue Datei `pizzabestellung.py` im Verzeichnis 'AG-Programmieren'. Wir brauchen nun ein Menü und wollen es anzeigen. Dafür nehmen wir zunächst eine Liste und geben die Liste dann aus:
+
+```python
+pizzen = [
+    "1 Pizza Margherita",
+    "2 Pizza Funghi",
+    "3 Pizza Salami",
+    "4 Pizza Caprese",
+    "5 Pizza Quattro Stagioni",
+]
+
+print(pizzen)
+```
+
+Das sieht nicht ganz so aus, wie wir das haben wollen. Das liegt daran: Bei einer Liste müssen wir jedes Element in einer for-Schleife durchlaufen und ausgeben. Man spricht hier von Iteration, man iteriert über die Liste. Wir wandeln den print-Befehl ab:
+
+```python
+for pizza in pizzen:
+  print(pizza)
+```
+
+Dabei kann das Wort "pizza" nach `for` frei gewählt werden, der Variablenname "pizzen" aber natürlich nicht. Die Konvention ist aber, hier immer die Einzahl des Variablennamens zu nehmen.
+
+>### Aufgabe
+>* Füge eine Überschrift "Unsere Speisekarte hinzu". <br>
+>* Frage den Nutzer mit dem `input`-Befehl nach seiner Wunschpizza und speichere die Nummer in eine Variable.
+>* Gib am Ende die gewählte Pizza aus, z.B. "Sie haben ... gewählt." (Siehe oben: Bezug auf Listenelemente) 
+>
+> ACHTUNG: Die Zählung beginnt bei 0, aber der Kunde gibt 1 ein. Was musst du beachten?
+> 
+> ACHTUNG: Der Kunde gibt die Zahl als String ein. Du musst den Typ noch in eine Zahl umwandeln `int(deinevariable)``
+
+<details><summary>Lösung</summary>
+
+```python
+pizzas = [
+    "1 Pizza Margherita",
+    "2 Pizza Funghi",
+    "3 Pizza Salami",
+    "4 Pizza Caprese",
+    "5 Pizza Quattro Stagioni",
+]
+
+print("Unsere Speisekarte:")
+
+for pizza in pizzen:
+    print(pizza)
+
+auswahl = input("Bitte wählen Sie die Nummer Ihrer Pizza: ")
+
+print("Sie haben " + pizzen[int(auswahl) - 1] + " gewählt.")
+```
+
+</details>
+<br>
+
+Nun wollen wir den Benutzer fragen, ob er auch etwas trinken möchte. Er wird uns mit "j" oder "n" antworten und wir müssen mit einem Vergleichsoperator feststellen, ob wir nun ein Getränk anbieten oder nicht. 
+
+**Vergleichsoperatoren**
+|Operator|Bedeutung|
+|---|---|
+|==|ist gleich|
+|!=|ungleich|
+|>|größer als|
+|<|kleiner als|
+|>=|größer/gleich|
+|<=|kleiner/gleich|
+
+...
