@@ -256,7 +256,7 @@ Dabei kann das Wort "pizza" nach `for` frei gewählt werden, der Variablenname "
 >
 > ACHTUNG: Die Zählung beginnt bei 0, aber der Kunde gibt 1 ein. Was musst du beachten?
 > 
-> ACHTUNG: Der Kunde gibt die Zahl als String ein. Du musst den Typ noch in eine Zahl umwandeln `int(deinevariable)``
+> ACHTUNG: Der Kunde gibt die Zahl als String ein. Du musst den Typ noch in eine Zahl umwandeln `int(deinevariable)`
 
 <details><summary>Lösung</summary>
 
