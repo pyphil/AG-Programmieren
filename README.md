@@ -82,7 +82,7 @@ Wichtig ist bei der Python-Installation, dass du Python der PATH Variable hinzuf
 
 ![Add Python to Path](images/pythontopath.png)
 
-Beim Rest der Python-Installation sowie der VSCode-Installation kannst du die Standardeinstellungen übernehmen.
+Beim Rest der Python-Installation sowie der VSCode-Installation kannst du die Standardeinstellungen übernehmen. Beim Arbeiten mit Python-Dateien in VSCode wird dir die Installation von der Python- und Pylance-Extension angebot, was du unbedingt machen solltest.
 
 # Die Python Shell
 Python-Code muss im Gegensatz zu Sprachen wie C/C++ nicht kompiliert werden. Er wird vom Interpreter bei der Ausführung in maschinenlesbaren Code umgewandelt. Wir können daher auch direkt auf der Python Shell unseren Code eingeben.
@@ -150,7 +150,7 @@ Lass uns das "Hello World!"-Programm umschreiben. Zunächst fragen wir den User 
 
 ```python
 name = input("Wie ist dein Name? ") 
-print("Hallo" + name)
+print("Hallo " + name)
 ```
 *Übrigens: Variablen werden immer klein geschrieben und mit einem Unterstrich (_), wenn sie aus mehreren Wörtern bestehen.*
 
@@ -158,7 +158,7 @@ Warum Typen wichtig sind, sieht man an folgendem Beispiel. Wir fragen das Alter 
 
 ```python
 alter = input("Wie alt bist du? ")
-print("In 50 Jahren bist du " + alter + 50 " Jahre alt.")
+print("In 50 Jahren bist du " + alter + 50 + " Jahre alt.")
 ```
 
 Die Fehlermeldung wird so aussehen.
@@ -173,7 +173,7 @@ TypeError: can only concatenate str (not "int") to str
 >Was ist passiert? Wie kann man es lösen?
 >
 >TIPP 1: 'concatenate' bedeutet verketten\
->TIPP 2: Typen können auch umgewandelt werden mit `int(variablenname)``
+>TIPP 2: Typen können auch umgewandelt werden, z.B. mit `int(variablenname)`
 
 
 ## Der "Kurzgeschichten-Generator"
@@ -202,6 +202,8 @@ mehr passieren...
 ```
 >### Aufgabe
 >Schreibe das passende Programm dazu im Editor VSCode. Lege dazu eine neue Datei `kurzgeschichtengenerator.py` an. Speichere die Benutzereingaben in die Variablen `name`, `monat`, `haarfarbe` und `ort` und verwende sie dann im Text. Wie musst du Besonderheiten wie "Stefan`s`" und "blond`en`" lösen?
+>
+> TIPP: Du musst entweder jede Zeile des Textes in Anführungszeichen setzen und mit einem Pluszeichen am Ende mit der nächsten verknüpfen oder die sogenannte Docstring Formatierung mit je drei Anführungszeichen nutzen: `""" Mein mehrzeiliger Text """`
 
 ## Kontrollstrukturen, Listen und Dictionaries
 Kontrollstrukturen legen die Reihenfolge fest, mit der Anweisungen ausgeführt werden. Die einfachste Form hast du oben bereits kennen gelernt: Die Sequenz, bei der einfach alle Befehle nacheinander abgearbeitet werden. Die wichtigsten Kontrollstrukturen sind:
