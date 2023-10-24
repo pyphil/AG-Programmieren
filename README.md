@@ -324,4 +324,4 @@ Wenn nicht "j" gedrückt wird, wird der else-Block ausgeführt.
 >
 > a) Der Code kann zum Beispiel in eine Funktion verlagert werden (`def select_drink():`) und im Falle einer falschen Eingabe ruft sich die Funktion selbst wieder auf.
 >
-> b) Der Code kann in einer While-Schleife ausgeführt. Die While-Schleife wird solange ausgeführt, wie eine definierte Bedigung wahr ist. In unserem Fall sollte sie also solange ausgeführt werden, wie die Bedingung `mit_drink != "j" or mit_drink != "n"`zutrifft.
+> b) Der Code kann in einer While-Schleife ausgeführt. Die While-Schleife wird solange ausgeführt, wie eine definierte Bedigung wahr ist. Am Einfachsten definieren wir eine Getränkeabfrage als Endlosschleife `while True:`, aus der wir nur am Ende des `if`- und `elif`-Blocks ausbrechen, wenn also die Eingabe "n" oder "j" ist. Dazu fügen wir im Ende der Blöcke `break` hinzu.
