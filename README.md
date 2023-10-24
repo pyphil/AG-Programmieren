@@ -318,6 +318,10 @@ Wenn nicht "j" gedrückt wird, wird der else-Block ausgeführt.
 > * Überlege dir, was beim else-Block ausgegeben werden soll.
 > * Im if-Block muss unterhalb von "Unsere Getränkekarte" noch einmal eine Auswahl erfolgen. Du brauchst also oben noch eine Getränkeliste und musst im if-Block den Code ähnlich wie bei der Pizzaauswahl ergänzen.
 >
-> EXTRA: "n" wird momentan nicht abgefragt. Hast du eine Idee wie du den Code verbessern kannst? Der else-Block soll nun alle falschen Zeichen übernehmen und eine entsprechende Rückmeldung geben. Für "n" kannst du einen weiteren if-Block einfügen.
+> EXTRA: "n" wird momentan nicht abgefragt. Hast du eine Idee wie du den Code verbessern kannst? Der else-Block soll nun für alle falschen Zeichen zuständig sein und eine entsprechende Rückmeldung geben. Für "n" kannst du einen weiteren if-Block einfügen. Du musst dabei aber nun `elif` verwenden, denn die Bedingung soll nur geprüft werden, wenn die erste Bedingung nicht zutraf.
 >
-> PROFI: Wenn nach einer falschen Eingabe erneut nach dem Getränk gefragt werden soll, muss man anders vorgehen. Der Code kann zum Beispiel in eine Funktion verlagert werden (`def select_drink():`) und im Falle einer falschen Eingabe ruft sich die Funktion selbst wieder auf.
+> PROFI: Wenn nach einer falschen Eingabe erneut nach dem Getränk gefragt werden soll, muss man anders vorgehen. Es gibt verschiedene Möglichkeiten:
+>
+> a) Der Code kann zum Beispiel in eine Funktion verlagert werden (`def select_drink():`) und im Falle einer falschen Eingabe ruft sich die Funktion selbst wieder auf.
+>
+> b) Der Code kann in einer While-Schleife ausgeführt. Die While-Schleife wird solange ausgeführt, wie eine definierte Bedigung wahr ist. In unserem Fall sollte sie also solange ausgeführt werden, wie die Bedingung `mit_drink != "j" or mit_drink != "n"`zutrifft.
