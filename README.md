@@ -228,6 +228,7 @@ Im folgenden kleinen Programm wollen wir eine Pizzabestellung abwickeln. Es soll
 
 Für dieses Programm werden wir mit Variablen arbeiten. Des Weiteren kommen Listen und Dictionaries zum Einsatz. Außerdem brauchen wir for-Schleifen, um die Listen abzuarbeiten.
 
+## Pizzabestellung mit Liste
 Fangen wir einfach an: Erstelle eine neue Datei `pizzabestellung.py` im Verzeichnis 'AG-Programmieren'. Wir brauchen nun ein Menü und wollen es anzeigen. Dafür nehmen wir zunächst eine Liste und geben die Liste dann aus:
 
 ```python
@@ -315,13 +316,13 @@ else:
 Wenn nicht "j" gedrückt wird, wird der else-Block ausgeführt.
 
 >### Aufgaben II
-> * Überlege dir, was beim else-Block ausgegeben werden soll.
-> * Im if-Block muss unterhalb von "Unsere Getränkekarte" noch einmal eine Auswahl erfolgen. Du brauchst also oben noch eine Getränkeliste und musst im if-Block den Code ähnlich wie bei der Pizzaauswahl ergänzen.
+> 1. Überlege dir, was beim else-Block ausgegeben werden soll.
+> 1. Im if-Block muss unterhalb von "Unsere Getränkekarte" noch einmal eine Auswahl erfolgen. Du brauchst also oben noch eine Getränkeliste und musst im if-Block den Code ähnlich wie bei der Pizzaauswahl ergänzen.
+> 1. "n" wird momentan nicht abgefragt. Hast du eine Idee wie du den Code verbessern kannst? Der else-Block soll nun für alle falschen Zeichen zuständig sein und eine entsprechende Rückmeldung geben. Für "n" kannst du einen weiteren if-Block einfügen. Du musst dabei aber nun `elif` verwenden, denn die Bedingung soll nur geprüft werden, wenn die erste Bedingung nicht zutraf.
+> 1. Wenn nach einer falschen Eingabe erneut nach dem Getränk gefragt werden soll, muss man anders vorgehen. Es gibt verschiedene Möglichkeiten:
 >
-> EXTRA: "n" wird momentan nicht abgefragt. Hast du eine Idee wie du den Code verbessern kannst? Der else-Block soll nun für alle falschen Zeichen zuständig sein und eine entsprechende Rückmeldung geben. Für "n" kannst du einen weiteren if-Block einfügen. Du musst dabei aber nun `elif` verwenden, denn die Bedingung soll nur geprüft werden, wenn die erste Bedingung nicht zutraf.
+>    a) Der Code kann zum Beispiel in eine Funktion verlagert werden (`def select_drink():`) und im Falle einer falschen Eingabe ruft sich die Funktion selbst wieder auf.
 >
-> PROFI: Wenn nach einer falschen Eingabe erneut nach dem Getränk gefragt werden soll, muss man anders vorgehen. Es gibt verschiedene Möglichkeiten:
->
-> a) Der Code kann zum Beispiel in eine Funktion verlagert werden (`def select_drink():`) und im Falle einer falschen Eingabe ruft sich die Funktion selbst wieder auf.
->
-> b) Der Code kann in einer While-Schleife ausgeführt. Die While-Schleife wird solange ausgeführt, wie eine definierte Bedigung wahr ist. Am Einfachsten definieren wir eine Getränkeabfrage als Endlosschleife `while True:`, aus der wir nur am Ende des `if`- und `elif`-Blocks ausbrechen, wenn also die Eingabe "n" oder "j" ist. Dazu fügen wir im Ende der Blöcke `break` hinzu.
+>    b) Der Code kann in einer While-Schleife ausgeführt. Die While-Schleife wird solange ausgeführt, wie eine definierte Bedigung wahr ist. Am Einfachsten definieren wir eine Getränkeabfrage als Endlosschleife `while True:`, aus der wir nur am Ende des `if`- und `elif`-Blocks ausbrechen, wenn also die Eingabe "n" oder "j" ist. Dazu fügen wir im Ende der Blöcke `break` hinzu.
+
+## Pizzabestellung mit Dictionary
