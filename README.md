@@ -325,4 +325,13 @@ Wenn nicht "j" gedrückt wird, wird der else-Block ausgeführt.
 >
 >    b) Der Code kann in einer While-Schleife ausgeführt. Die While-Schleife wird solange ausgeführt, wie eine definierte Bedigung wahr ist. Am Einfachsten definieren wir eine Getränkeabfrage als Endlosschleife `while True:`, aus der wir nur am Ende des `if`- und `elif`-Blocks ausbrechen, wenn also die Eingabe "n" oder "j" ist. Dazu fügen wir im Ende der Blöcke `break` hinzu.
 
-## Pizzabestellung mit Dictionary
+## Pizzabestellung mit dictionary und GUI
+Wir heben die Pizzabestellung auf das nächste Level. Statt eines konsolenbasierten Programms wollen wir nun ein Programm mit GUI (Graphical User Interface) um mit dem Nutzer zu interagieren. In Python integriert ist grafische Toolkit tkinter.
+
+Zunächst importieren wir zu Beginn tkinter und machen es durch den verkürzten Namen `tk` erreichbar:
+
+```python
+import tkinter as tk
+```
+
+Wir erstellen das Fenster mit folgendem Code
