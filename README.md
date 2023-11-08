@@ -334,4 +334,40 @@ Zunächst importieren wir zu Beginn tkinter und machen es durch den verkürzten 
 import tkinter as tk
 ```
 
-Wir erstellen das Fenster mit folgendem Code
+Wir erstellen das Fenster mit der Variablen `window` mit folgendem Code. Um die Erstellung der grafischen Oberfläche auszuführen, muss am Ende `window.mainloop()` stehen
+
+```python
+# Initialisierung des Fensters
+window = tk.Tk()
+window.geometry("300x200")
+window.title("Pizzabestellung")
+
+window.mainloop()
+```
+
+Probiere es aus. Du solltest ein leeres tkinter-Fenster mit dem Titel "Pizzabestellung" sehen. 
+
+Nun wollen wir eine Frame erstellen, den wir danach auch wieder entfernen können um neue Inhalte anzuzeigen. Außerdem wollen wir nun Text anzeigen mithilfe eines Labels und einen Button erzeugen, der später die Funktion `show_pizza_menu()` ausführt. Die Elemente werden danach jeweils mit dem Befehl `pack()` auf der Benutzeroberfläche angeordnet.
+
+```python
+frame = tk.Frame(window)
+frame.pack()
+
+label = tk.Label(frame, text="Willkommen zur Pizzabestellung")
+label.pack()
+
+button = tk.Button(frame, text="Weiter", command=show_pizza_menu)
+button.pack()
+```
+
+Damit der Code jetzt schon ausführbar ist, muss die Funktion `show_pizza_menu()` zumindest mit einem Plazhalter (`pass`) schon einmal eingerichtet werden. Füge unterhalb des Imports von tkinter folgendes ein:
+
+```python
+import tkinter as tk
+
+# Funktionen für die Benutzeroberfläche
+def show_pizza_menu():
+    pass
+```
+
+Der Weiter-Button wird noch nichts bewirken. Probiere aus, was passiert, wenn du `pass` durch `print("TEST")` austauschst.
