@@ -371,3 +371,24 @@ def show_pizza_menu():
 ```
 
 Der Weiter-Button wird noch nichts bewirken. Probiere aus, was passiert, wenn du `pass` durch `print("TEST")` austauschst.
+
+
+# Pizza- und Getränkemenü als Dictionaries in einem Dictionary
+```python
+# Pizza- und Getränkeauswahl mit dictionaries in einem dictionary
+pizzen = {
+    1: {"name": "Pizza Margherita", "preis": 5},
+    2: {"name": "Pizza Funghi", "preis": 6},
+    3: {"name": "Pizza Salami", "preis": 7},
+    4: {"name": "Pizza Caprese", "preis": 7},
+    5: {"name": "Pizza Quattro Stagioni", "preis": 8},
+}
+
+drinks = {
+    1: {"name": "Wasser", "preis": 1},
+    2: {"name": "Fanta", "preis": 2},
+    3: {"name": "Sprite", "preis": 2},
+    4: {"name": "Cola", "preis": 3},
+    5: {"name": "Kaffee", "preis": 4},
+}
+```
