@@ -373,7 +373,10 @@ def show_pizza_menu():
 Der Weiter-Button wird noch nichts bewirken. Probiere aus, was passiert, wenn du `pass` durch `print("TEST")` austauschst.
 
 
-# Pizza- und Getränkemenü als Dictionaries in einem Dictionary
+### Pizza- und Getränkemenü als Dictionaries in einem Dictionary
+
+Unsere Menü-Listen aus dem vorherigen Beispiel ersetzen wir nun durch Dictionaries. Genauer: Ein Dictionary, das wiederum dictionaries enthält. Der Schlüssel 1 enthält im Folgenden ein weiteres Dictionary als Wert. Diese enthält nun die Schlüssel "name" und "preis" mit den ensprechenden Werten. So ist es einfacher, sich auf die einzelnen Elemente zu beziehen. Wir fügen folgende Dictionaries nach dem Import-Befehl in unseren Code ein:
+
 ```python
 # Pizza- und Getränkeauswahl mit dictionaries in einem dictionary
 pizzen = {
@@ -392,3 +395,9 @@ drinks = {
     5: {"name": "Kaffee", "preis": 4},
 }
 ```
+
+### Funktion zur Darstellung des Menüs
+Die Funktion `show_pizza_menu()` müssen wir nun mit Inhalt füllen. Zunächst löschen wir den alten Frame und erstellen einen neuen Frame. Ein Label enthält wieder die Überschrift. Achte wieder darauf, dass Integer in Strings umgewandelt werden müssen, wenn wir sie in einem String verkettenwollen. 
+
+Dann erstellen wir mittels einer For-Schleife, die über das Dictionary iteriert, das Pizzamenü. Mit dem `pack`-Befehl werden die Elemente wieder auf dem Frame angeordnet.
+
