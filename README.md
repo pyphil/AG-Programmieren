@@ -397,7 +397,33 @@ drinks = {
 ```
 
 ### Funktion zur Darstellung des Menüs
-Die Funktion `show_pizza_menu()` müssen wir nun mit Inhalt füllen. Zunächst löschen wir den alten Frame und erstellen einen neuen Frame. Ein Label enthält wieder die Überschrift. Achte wieder darauf, dass Integer in Strings umgewandelt werden müssen, wenn wir sie in einem String verkettenwollen. 
+Die Funktion `show_pizza_menu()` müssen wir nun mit Inhalt füllen. Zunächst löschen wir den alten Frame und erstellen einen neuen Frame. Ein Label enthält wieder die Überschrift. Achte wieder darauf, dass Integer in Strings umgewandelt werden müssen, wenn wir sie in einem String verketten wollen. Mit dem Backslash `\` können wir eine zu lange Zeile umbrechen.
 
 Dann erstellen wir mittels einer For-Schleife, die über das Dictionary iteriert, das Pizzamenü. Mit dem `pack`-Befehl werden die Elemente wieder auf dem Frame angeordnet.
 
+```python
+def show_pizza_menu():
+    # Zeige das Pizzamenü in einem neuen Frame
+    global frame
+    frame.pack_forget()
+    frame = tk.Frame(window)
+    frame.pack()
+
+    label = tk.Label(frame, text="Pizzamenü:")
+    label.pack()
+
+    # Buttons in for-Schleife erstellen
+    for no in pizzen:
+        button = tk.Button(frame,
+            text=(str(no) + " " + pizzen[no]["name"] + ": " \
+                  + str(pizzen[no]["preis"]) + " €")
+        )
+        button.pack()
+```
+
+>### Aufgaben
+> 1. Was nun noch fehlt ist der Aufruf der nächsten Funktion in jedem Pizza-Button. Füge `command=lambda no=no: select_pizza(no)` hinter dem `text`-Parameter von `tk.Button` ein. Denke an ein Komma. Durch `no` beim Aufruf der select_pizza-Funktion übergeben wir die aktuelle Nummer der ausgewählten Pizza an die nächste Funktion. 
+> 2. Erstelle eine neue Funktion `select_pizza(selected_pizza)`. Diese Funktion nimmt nun die Nummer (`no`) als `selected_pizza` entgegen. Erstelle zunächst wieder einen neuen Frame. Dann wollen wir
+>    - Ein Label, das die gewählte Pizza anzeigt.
+>    - Ein Label, das die Frage enthält, ob etwas getrunken werden soll
+>    - Zwei Buttons mit "Ja" bzw. "Nein"
