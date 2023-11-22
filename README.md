@@ -534,3 +534,36 @@ Die Getränkekarte funktioniert nun ganz ähnlich wie die Pizzakarte. Für jedes
 
 `command=lambda no=no: pay(no, selected_pizza)`
 
+>### Aufgabe Getränkekarte
+> Schreibe die Funktion `def show_drink_menu(selected_pizza):` selbständig.
+
+### Funktion zum Bezahlen hinzufügen
+
+Die letzte Funktion unseres Programms soll die Bestellung noch einmal ausgeben und auch den Gesamtbetrag berechnene und anzeigen. Folgende Besonderheiten gibt es in dieser Funktion:
+
+- Die Funktion erhält die ausgewählte Pizza und ggf., falls der Benutzer ein Getränkt wählt, die Getränkenummer. Daher lautet der Parameter in der Funktion `pay` auch `selected_drink=None`, d.h. standardmäßig ist er nicht gesetzt, es sei denn es kommt von der aufrufenden Funktion ein Getränk.
+- In auszugebenden Strings (Textzeichenketten) wollen wir auch Zeilenumbrüche. Dafür wird `\n` eingefügt.
+- Die Strings werden dieses Mal mit sogenannten f-Strings formatiert. Dabei haben wir keine Verkettung mit "+" mehr und Variablen werden in geschweifte Klammern gesetzt. Beispiel: `f'Deine Bestellung:\n\n{pizza_name} - {pizza_preis} Euro`
+
+>### Aufgabe Pay-Funktion
+> Du erhältst dieses Mal die vollständige Funktion, aber die Zeilen sind in der **falschen Reihenfolge** und auch **nicht eingerückt**. Bringe die Funktion in Ordnung. Vergleiche dazu mit den andern Funktionen, die wir schon geschrieben haben.
+>
+> Kopiere dir folgenden falschen Code in deinen bisherigen Code unterhalb der bisherigen Funktionen. Sobald der Cursor sich in einer Zeile befindet, kannst du diese Zeile mit der Tastenkombination `Strg`+`Pfeil nach oben/unten` verschieben.
+> ```python
+> def pay(selected_pizza, selected_drink=None):
+> frame.pack_forget()
+> drink_name = drinks[selected_drink]["name"]
+>  frame.pack()
+> rechnungstext = f'Deine Bestellung:\n\n{pizza_name} - {pizza_preis} Euro\n\nRechnungsbetrag: {pizza_preis} Euro'
+> pizza_preis = pizzen[selected_pizza]["preis"]
+> if selected_drink is None:
+> label_pizza = tk.Label(frame, text=rechnungstext)
+> global frame
+> else:
+> pizza_name = pizzen[selected_pizza]["name"]
+> drink_preis = drinks[selected_drink]["preis"]
+> gesamtpreis = pizza_preis + drink_preis
+>  frame = tk.Frame(window)
+> rechnungstext = f'Deine Bestellung:\n\n{pizza_name} - {pizza_preis} Euro\n{drink_name} - {drink_preis} Euro\n\nRechnungsbetrag: {gesamtpreis} Euro'
+> label_pizza.pack()
+> ``` 
