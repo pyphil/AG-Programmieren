@@ -537,6 +537,26 @@ Die Getränkekarte funktioniert nun ganz ähnlich wie die Pizzakarte. Für jedes
 >### Aufgabe Getränkekarte
 > Schreibe die Funktion `def show_drink_menu(selected_pizza):` selbständig.
 
+<details><summary>Lösung</summary>
+Das Programm sollte bisher so aussehen:
+
+```python
+def show_drink_menu(selected_pizza):
+    global frame
+    # Zeige Getränkemenü
+    frame.pack_forget()
+    frame = tk.Frame(window)
+    frame.pack()
+
+    for no in drinks:
+        button = tk.Button(
+            frame,
+            text=(str(no) + " " + drinks[no]["name"] + " - " + str(drinks[no]["preis"]) + " Euro"),
+            command=lambda no=no: pay(no, selected_pizza)
+        )
+        button.pack(fill="both")
+```
+
 ### Funktion zum Bezahlen hinzufügen
 
 Die letzte Funktion unseres Programms soll die Bestellung noch einmal ausgeben und auch den Gesamtbetrag berechnene und anzeigen. Folgende Besonderheiten gibt es in dieser Funktion:
