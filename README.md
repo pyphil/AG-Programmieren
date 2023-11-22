@@ -567,3 +567,16 @@ Die letzte Funktion unseres Programms soll die Bestellung noch einmal ausgeben u
 > rechnungstext = f'Deine Bestellung:\n\n{pizza_name} - {pizza_preis} Euro\n{drink_name} - {drink_preis} Euro\n\nRechnungsbetrag: {gesamtpreis} Euro'
 > label_pizza.pack()
 > ``` 
+
+## Ein ausführbares Programm mit PyInstaller erstellen
+### Virtual Environment
+Wenn wir weitere Pakete in Python installieren wollen, ist es eine gute Idee zunächst eine Virtual Environment zu erstellen. D.h. in den Verzeichnis deines Codes wird es ein Unterverzeichnis geben, in dem dann genau die Pakete in den Versionen vorliegen, wie du sie für dein Programm brauchst, aber eben nicht für andere Programme. Daher sollten diese Pakete nicht in der Hauptversion von Python installiert werden. 
+
+Du erstellst eine Virtual Environment mit dem Namen `.venv` im Terminal mit:
+
+`python -m venv .venv`
+
+Die Virtual Environment muss nun aktiviert werden. Dazu kannst du z.B. mit dem `+`-Zeichen ein neues Terminal erstellen, sodass die virtual environment automatisch aktiviert wird. Manuell geht es mit dem Befehl:
+
+`.venv\Scripts\activate`
+
