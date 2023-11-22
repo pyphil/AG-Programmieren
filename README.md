@@ -530,4 +530,7 @@ window.mainloop()
 
 ### Funktion zur Darstellung der Getränkekarte
 
-Die Getränkekarte funktioniert nun ganz ähnlich wie die Pizzakarte. Die Buttons der einzelenen
+Die Getränkekarte funktioniert nun ganz ähnlich wie die Pizzakarte. Für jedes Getränk wird wieder ein Button erzeugt. Das Kommando ist dieses mal aber etwas anders. Wir übergeben die Nummer der ausgewählten Pizza `selected_pizza` und zusätzlich die Nummer des Getränks `no` an die Funktion `pay`. Damit die richtige Getränkevariable in jedem Button hinterlegt ist, muss die Variable mit `no=no` noch einmal explizit gesetzt werden. Das Kommando im Button sieht daher so aus:
+
+`command=lambda no=no: pay(no, selected_pizza)`
+
