@@ -588,6 +588,30 @@ Die letzte Funktion unseres Programms soll die Bestellung noch einmal ausgeben u
 > label_pizza.pack()
 > ``` 
 
+<details><summary>Lösung</summary>
+Die Funktion für die Bezahlfunktion sollte so aussehen:
+def pay(selected_pizza, selected_drink=None):
+    global frame
+    # Zeige Rechnung
+    frame.pack_forget()
+    frame = tk.Frame(window)
+    frame.pack()
+
+    pizza_name = pizzen[selected_pizza]["name"]
+    pizza_preis = pizzen[selected_pizza]["preis"]
+
+    if selected_drink is None:
+        rechnungstext = f'Deine Bestellung:\n\n{pizza_name} - {pizza_preis} Euro\n\nRechnungsbetrag: {pizza_preis} Euro'
+    else:
+        drink_name = drinks[selected_drink]["name"]
+        drink_preis = drinks[selected_drink]["preis"]
+        gesamtpreis = pizza_preis + drink_preis
+        rechnungstext = f'Deine Bestellung:\n\n{pizza_name} - {pizza_preis} Euro\n{drink_name} - {drink_preis} Euro\n\nRechnungsbetrag: {gesamtpreis} Euro'
+
+    label_pizza = tk.Label(frame, text=rechnungstext)
+    label_pizza.pack()
+```python
+
 ## Ein ausführbares Programm mit PyInstaller erstellen
 ### Virtual Environment
 Wenn wir weitere Pakete in Python installieren wollen, ist es eine gute Idee zunächst eine Virtual Environment zu erstellen. D.h. in den Verzeichnis deines Codes wird es ein Unterverzeichnis geben, in dem dann genau die Pakete in den Versionen vorliegen, wie du sie für dein Programm brauchst, aber eben nicht für andere Programme. Daher sollten diese Pakete nicht in der Hauptversion von Python installiert werden. 
