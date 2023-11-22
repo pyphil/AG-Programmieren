@@ -500,11 +500,11 @@ def select_pizza(selected_pizza):
     button_no.pack(side=tk.RIGHT)
 
 
-def show_drink_menu():
+def show_drink_menu(selected_pizza):
     pass
 
 
-def pay():
+def pay(selected_pizza):
     pass
 
 
