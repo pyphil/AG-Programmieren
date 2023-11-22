@@ -538,7 +538,7 @@ Die Getränkekarte funktioniert nun ganz ähnlich wie die Pizzakarte. Für jedes
 > Schreibe die Funktion `def show_drink_menu(selected_pizza):` selbständig.
 
 <details><summary>Lösung</summary>
-Das Programm sollte bisher so aussehen:
+Die Funktion für die Getränkekarte sollte so aussehen:
 
 ```python
 def show_drink_menu(selected_pizza):
