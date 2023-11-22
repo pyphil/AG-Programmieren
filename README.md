@@ -590,6 +590,8 @@ Die letzte Funktion unseres Programms soll die Bestellung noch einmal ausgeben u
 
 <details><summary>Lösung</summary>
 Die Funktion für die Bezahlfunktion sollte so aussehen:
+
+```python
 def pay(selected_pizza, selected_drink=None):
     global frame
     # Zeige Rechnung
@@ -610,7 +612,7 @@ def pay(selected_pizza, selected_drink=None):
 
     label_pizza = tk.Label(frame, text=rechnungstext)
     label_pizza.pack()
-```python
+```
 
 ## Ein ausführbares Programm mit PyInstaller erstellen
 ### Virtual Environment
