@@ -396,7 +396,7 @@ drinks = {
 }
 ```
 
-### Funktion zur Darstellung des Menüs
+### Funktion zur Darstellung des Pizzakarte
 Die Funktion `show_pizza_menu()` müssen wir nun mit Inhalt füllen. Zunächst löschen wir den alten Frame und erstellen einen neuen Frame. Ein Label enthält wieder die Überschrift. Achte wieder darauf, dass Integer in Strings umgewandelt werden müssen, wenn wir sie in einem String verketten wollen. Mit dem Backslash `\` können wir eine zu lange Zeile umbrechen.
 
 Dann erstellen wir mittels einer For-Schleife, die über das Dictionary iteriert, das Pizzamenü. Mit dem `pack`-Befehl werden die Elemente wieder auf dem Frame angeordnet.
@@ -427,3 +427,107 @@ def show_pizza_menu():
 >    - Ein Label, das die gewählte Pizza anzeigt.
 >    - Ein Label, das die Frage enthält, ob etwas getrunken werden soll
 >    - Zwei Buttons mit "Ja" bzw. "Nein"
+>    - Der Button "Ja" soll die Funktion `show_drink_menu(selected_pizza)` ausführen
+>    - Der Button "Nein" soll die Funktion `pay(selected_pizza) ausführen`, um später direkt zum Bezahlvorgang zu gehen.
+>    - Denke daran, die beiden Funktionen zu erstellen und zunächst mit dem Befehl `pass` im Funktionskörper zu füllen, sodass du dein Programm schon einmal testen kannst.
+
+<details><summary>Lösung</summary>
+Das Programm sollte bisher so aussehen:
+
+```python
+import tkinter as tk
+
+
+# Pizza- und Getränkeauswahl mit dictionaries in einem dictionary
+pizzen = {
+    1: {"name": "Pizza Margherita", "preis": 5},
+    2: {"name": "Pizza Funghi", "preis": 6},
+    3: {"name": "Pizza Salami", "preis": 7},
+    4: {"name": "Pizza Caprese", "preis": 7},
+    5: {"name": "Pizza Quattro Stagioni", "preis": 8},
+}
+
+drinks = {
+    1: {"name": "Wasser", "preis": 1},
+    2: {"name": "Fanta", "preis": 2},
+    3: {"name": "Sprite", "preis": 2},
+    4: {"name": "Cola", "preis": 3},
+    5: {"name": "Kaffee", "preis": 4},
+}
+
+# Gesamtbetrag
+betrag = 0
+
+
+def show_pizza_menu():
+    # Zeige das Pizzamenü in einem neuen Frame
+    global frame
+    frame.pack_forget()
+    frame = tk.Frame(window)
+    frame.pack()
+
+    label = tk.Label(frame, text="Pizzamenü:")
+    label.pack()
+
+    # Buttons in for-Schleife erstellen
+    for no in pizzen:
+        button = tk.Button(frame,
+            text=(str(no) + " " + pizzen[no]["name"] + ": " \
+                  + str(pizzen[no]["preis"]) + " €"),
+            command=lambda no=no: select_pizza(no)
+        )
+        button.pack(fill="both")
+
+
+def select_pizza(selected_pizza):
+    # Zeige ausgewählte Pizza und frage nach Getränken
+    global frame
+    frame.pack_forget()
+    frame = tk.Frame(window)
+    frame.pack()
+
+    label_1 = tk.Label(frame, text="Sie haben " + \
+                       pizzen[selected_pizza]["name"] + "gewählt.")
+    label_2 = tk.Label(frame, text="Möchten Sie auch etwas trinken?")
+    button_yes = tk.Button(frame, text="Ja", 
+            command=lambda: show_drink_menu(selected_pizza))
+    button_no = tk.Button(frame, text="Nein", 
+            command=lambda: pay(selected_pizza))
+
+    label_1.pack()
+    label_2.pack()
+    button_yes.pack(side=tk.LEFT)
+    button_no.pack(side=tk.RIGHT)
+
+
+def show_drink_menu():
+    pass
+
+
+def pay():
+    pass
+
+
+# Fenster erstellen
+window = tk.Tk()
+window.geometry("300x200")
+window.title("Pizzabestellung")
+
+frame = tk.Frame(window)
+frame.pack()
+
+label = tk.Label(frame, text="Willkommen zur Pizzabestellung")
+label.pack()
+
+button = tk.Button(frame, text="Weiter", command=show_pizza_menu)
+button.pack()
+
+window.mainloop()
+
+```
+
+</details>
+
+### Funktion zur Darstellung der Getränkekarte
+
+Die Getränkekarte funktioniert nun ganz ähnlich wie die Pizzakarte. Die Buttons der einzelenen
