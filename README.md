@@ -613,6 +613,7 @@ def pay(selected_pizza, selected_drink=None):
     label_pizza = tk.Label(frame, text=rechnungstext)
     label_pizza.pack()
 ```
+</details>
 
 ## Ein ausführbares Programm mit PyInstaller erstellen
 ### Virtual Environment
@@ -622,7 +623,14 @@ Du erstellst eine Virtual Environment mit dem Namen `.venv` im Terminal mit:
 
 `python -m venv .venv`
 
-Die Virtual Environment muss nun aktiviert werden. Dazu kannst du z.B. mit dem `+`-Zeichen ein neues Terminal erstellen, sodass die virtual environment automatisch aktiviert wird. Manuell geht es mit dem Befehl:
+Die Virtual Environment muss nun aktiviert werden. Dazu kannst du z.B. mit dem `+`-Zeichen ein neues Terminal erstellen, sodass die virtual environment automatisch aktiviert wird. Manuell geht es unter Windows mit dem Befehl:
 
 `.venv\Scripts\activate`
 
+Unter Linux und MacOS:
+
+`source .venv/bin/activate`
+
+Dass es funktioniert hat, erkennst du daran, dass im Terminal der Name der Virtual Environment vorangestellt ist:
+
+...
