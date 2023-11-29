@@ -523,7 +523,6 @@ button = tk.Button(frame, text="Weiter", command=show_pizza_menu)
 button.pack()
 
 window.mainloop()
-
 ```
 
 </details>
@@ -552,10 +551,11 @@ def show_drink_menu(selected_pizza):
         button = tk.Button(
             frame,
             text=(str(no) + " " + drinks[no]["name"] + " - " + str(drinks[no]["preis"]) + " Euro"),
-            command=lambda no=no: pay(no, selected_pizza)
+            command=lambda no=no: pay(selected_pizza, no)
         )
         button.pack(fill="both")
 ```
+</details>
 
 ### Funktion zum Bezahlen hinzufügen
 
