@@ -615,10 +615,10 @@ def pay(selected_pizza, selected_drink=None):
 ```
 </details>
 
-## Ein ausführbares Programm mit PyInstaller erstellen
-### Virtual Environment
+## Mit einer Virtual Environment arbeiten
 Wenn wir weitere Pakete in Python installieren wollen, ist es eine gute Idee zunächst eine Virtual Environment zu erstellen. D.h. in den Verzeichnis deines Codes wird es ein Unterverzeichnis geben, in dem dann genau die Pakete in den Versionen vorliegen, wie du sie für dein Programm brauchst, aber eben nicht für andere Programme. Daher sollten diese Pakete nicht in der Hauptversion von Python installiert werden. 
 
+### Virtual Environment erstellen
 Du erstellst eine Virtual Environment mit dem Namen `.venv` im Terminal mit:
 
 `python -m venv .venv`
@@ -631,6 +631,16 @@ Unter Linux und MacOS:
 
 `source .venv/bin/activate`
 
-Dass es funktioniert hat, erkennst du daran, dass im Terminal der Name der Virtual Environment vorangestellt ist:
+Dass es funktioniert hat, erkennst du daran, dass im Terminal der Name der Virtual Environment ".venv" vorangestellt ist:
 
-...
+`(.venv) PS C:\GitHub\AG-Programmieren> `
+
+### Pip updaten
+
+Pip, der Python Package Installer, sollte zunächst aktualisiert werden.
+
+`python -m pip install --upgrade pip`
+
+Mit `pip list` kannst du dir nun alle in der Virtuall Environment installierten Pakete anzeigen. Mit `pip install *packagename*` kannst du Pakete installieren.
+
+## Ein ausführbares Programm mit PyInstaller erstellen
