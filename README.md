@@ -623,11 +623,11 @@ Du erstellst eine Virtual Environment mit dem Namen `.venv` im Terminal mit:
 
 `python -m venv .venv`
 
-Die Virtual Environment muss nun aktiviert werden. Dazu kannst du z.B. mit dem `+`-Zeichen ein neues Terminal erstellen, sodass die virtual environment automatisch aktiviert wird. Manuell geht es unter Windows mit dem Befehl:
+Die Virtual Environment muss nun aktiviert werden. Dazu kannst du z.B. mit dem `+`-Zeichen ein neues Terminal erstellen, sodass die virtual environment automatisch aktiviert wird. Manuell geht es unter **Windows** mit dem Befehl:
 
 `.venv\Scripts\activate`
 
-Unter Linux und MacOS:
+Unter **Linux** und **MacOS**:
 
 `source .venv/bin/activate`
 
@@ -635,12 +635,21 @@ Dass es funktioniert hat, erkennst du daran, dass im Terminal der Name der Virtu
 
 `(.venv) PS C:\GitHub\AG-Programmieren> `
 
-### Pip updaten
+### Package Installer PIP
 
-Pip, der Python Package Installer, sollte zunächst aktualisiert werden.
+PIP, der Python Package Installer, sollte zunächst aktualisiert werden.
 
 `python -m pip install --upgrade pip`
 
-Mit `pip list` kannst du dir nun alle in der Virtuall Environment installierten Pakete anzeigen. Mit `pip install *packagename*` kannst du Pakete installieren.
+Mit `pip list` kannst du dir nun alle in der Virtual Environment installierten Pakete anzeigen. Mit `pip install *packagename*` kannst du Pakete installieren.
 
 ## Ein ausführbares Programm mit PyInstaller erstellen
+Um ein ausführbares Programm zu erstellen, dass man auch auf einem Rechner ausführen kann, auf dem kein Python installiert ist, kann man Pyinstaller benutzen. Stelle zunächst sicher, dass du in deiner Virtual Environment bist. Dann installieren wir PyInstaller.
+
+`pip install pyinstaller`
+
+Bei der Ausführung von pyinstaller geben wir an, welches Skript in ein binäres Programm umgewandelt werden soll:
+
+`pyinstaller pizzabestellung.pyw`
+
+Im neuen Unterordner "dist" findest du einen Ordner mit dem Namen deines Programms. Dieser Ordner enthält *.exe Datei und alle für die Ausführung benötigten Dateien. Den ganzen Ordner kann man nun z.B. als Zip-Datei komprimieren und weitergeben.
